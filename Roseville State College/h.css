@@ -1,0 +1,649 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+body {
+    background-color: rgb(226, 150, 151);
+    /*height: 100vh;
+    background-position: center;*/
+}   
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgba(0,0,0,0.5);
+}
+
+#chk1 {
+    display: none;
+    font-size: 200px;
+}
+
+i {
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+header .logo {
+    flex: 1;
+    color: #fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+header .search-box {
+    flex: 1;
+    position: relative;
+}
+
+.search-box input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #f2f2f2;
+    border-radius: 30px;
+    color: gray;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 5px;
+}
+
+.search-box button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: rgba(131, 16, 16, 0.664);
+}
+
+header ul {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+header ul li a:hover {
+    border-bottom: 2px solid cadetblue;
+}
+
+header .menu {
+    font-size: 2.5em;
+    display: none;
+}
+
+.arrow {
+    text-decoration: none;
+}
+
+
+
+@media(max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+
+    header ul{
+        position: fixed;
+        top: 100px;
+        background: rgba(121, 2, 2, 0.905);
+        height: calc(50vh - 50px);
+        width: 30%;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+        right: -50%; /* kani para ni hide sa menu off-screen */
+    }
+
+    header .menu{
+        display: block;
+        width: 100px;
+        text-align: center;
+    }
+
+    #chk1:checked ~ ul{
+        right: 0;
+    }
+}
+
+@media(max-width:600px){
+    header .logo{
+        font-size: 10px;
+        margin-left: 8px;
+    }
+
+    header ul{
+        width: 100%;
+        right: -100%; /* kani adjust for full width */
+    }
+}
+
+/*----------------------------------------------------CSS for INTRO PIC---------------------------*/
+
+.intro {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/intro.png');
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.ctnn {
+    text-decoration: none;
+    font-weight: 300;
+    padding: 8px 15px;
+    background: #770000;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.intro-content {
+    margin-bottom: 210px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.intro-content h2 {
+    font-size: 12vmin;
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 5px 5px 2px #000000;
+    color: rgb(220,20,60);
+}
+
+.lines {
+    width: 400px;
+    height: 3px;
+    background: #fc036b;
+    margin: 7px auto;
+    border-radius: 5px;
+}
+
+.intro-content h1 {
+    color: rgb(220,20,60);
+    text-shadow: 5px 5px 1px #000000;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 7vmin;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/*----------------------------------------------CSS for ARROW UP----------------------------------------*/
+html {
+    scroll-behavior: smooth;
+}
+
+.gotopbtn {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    background: #00aca9;
+    opacity: 0.8;
+    border-radius: 20px;
+    bottom: 40px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+
+
+/*---------------------------------------------This CSS is for FO0TER-----------------------------------*/
+.footer-container {
+    margin-top: 50px;
+
+}
+
+.info-footer {
+    margin-top: 20px;
+    font-size: 0.9em; 
+    text-align: center;
+}
+
+.info-footer p {
+    margin-bottom: 5px;
+}
+
+.info-footer i { /* kani adjust sa icons*/
+    margin-right: 8px;
+    font-size: 0.9em;
+}
+
+.social-medias {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px; 
+    justify-content: center;
+    font-size: 1.6em;
+}
+
+
+/*-------------------------------------------This CSS is for INTODUCTION--------------------------------------*/
+.hometext {
+    text-align: justify;
+    padding: 10px;
+    font-size: 15px;
+    text-indent: 60px;
+}
+
+.introBOX {
+    height: 505px; 
+    border: 4px solid rgb(226, 150, 151)
+}
+
+
+/*-------------------------------------------------This CSS is for FACILITIES--------------------------------*/
+.textFacility {
+    padding-top: 50px;
+    font-family: arial;
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+
+.facility-card {
+    background-color: #AC1754;
+    margin-bottom: 20px; /* Add space between cards */
+    font-size: x-large;
+    font-style: oblique;
+    color: #f2f2f2;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+
+.facility-image {
+    width: 100%; /* Make images responsive */
+    height: auto;
+}
+
+
+.lightbox-css {
+    display: none; 
+    position: fixed;
+    z-index: 1000; /* kanang naa siyas ibabaw sa uban facilities image*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* maka scroll kung kailangan*/
+    background-color: rgba(0,0,0,0.8); /* black transparent sa likod sa picture */
+    text-align: center;
+}
+
+.lightbox-content-css {
+    margin: 5% auto;
+    display: block;
+    width: 80%;
+    max-width: 90%;
+    max-height: 90%; 
+    object-fit: contain; /* makita whole image*/
+}
+
+.close-lightbox-css {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #f1f1f1;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.close-lightbox-css:hover,
+.close-lightbox-css:focus {
+    color: #ccc;
+}
+
+
+.lightbox-css:target {
+    display: block;
+}
+
+
+
+/*----------------------------------------------This CSS is for HIGHLIGHTS----------------------------------------*/
+.line {
+    width: 150px;
+    height: 4px;
+    background: #fc036b;
+    margin: 10px auto;
+    border-radius: 5px;
+    gap: 1px;   
+}
+.textHighlight {
+    padding-top: 50px;
+    font-family: arial;
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+
+.highlighttext {
+    text-align: justify;
+    padding: 10px;
+    font-size: 15px;
+    text-indent: 40px;
+}
+
+
+
+/*------------------------This CSS is for COURSE PAGE--------------------------------------------------------------------------------*/
+.course {
+    transition: transform 0.3s ease; /* this is for to add smooth transition */
+}
+
+.course:hover {
+    transform: scale(1.09); 
+}
+
+.course-image {
+    width: 100%; /* this is to ensure images fill the card */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.course-image {
+    height: 280px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+/*---------------------------------This CSS is for FALCULTIES PAGE---------------------------------------------------------------------*/
+.professor-card-small {
+    background-color: aliceblue;
+    width:100%;
+    height: 250px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.professor-card-small img {
+    width:100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.professor-card-small .w3-container {
+    flex-grow: 1; /* Allow the text container to grow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.professor-card-small h4 {
+    font-size: 1em; 
+}
+.professor-card-small p {
+    font-size: 0.8em; 
+}
+
+
+@media (max-width: 600px) {
+    .professor-card-small h4 {
+        font-size: 0.9em; /* Smaller font size on small screens */
+    }
+    .professor-card-small p {
+        font-size: 0.7em; /* Smaller font size on small screens */
+    }
+}
+
+
+
+/*--------------------------------------------------This CSS is for EVENT PAGE---------------------------------*/
+.eventCourse.w3-col {
+    margin-bottom: 40px;
+}
+
+/*--------------------------------------------------This CSS is for ABOUT PAGE---------------------------------*/
+
+
+
+/* -------------------------------This CSS is for ENROLLMENT FORM-------------------------------------- */
+
+.enrollment-form {
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    margin: 30px auto;
+}
+
+.enrollment-form .form-header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1px;
+    justify-content: center;
+}
+
+.enrollment-form .form-header h2 {
+    color: #333;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 1.1;
+}
+
+.enrollment-form .logo {
+    width: 90px;
+    height: auto;
+}
+
+.enrollment-form .column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.enrollment-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.enrollment-form .form-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.enrollment-form .form-group input[type="text"],
+.enrollment-form .form-group input[type="date"],
+.enrollment-form .form-group input[type="email"],
+.enrollment-form .form-group select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+    width: 100%;
+}
+
+.enrollment-form .form-group input[type="text"]:focus,
+.enrollment-form .form-group input[type="date"]:focus,
+.enrollment-form .form-group input[type="email"]:focus,
+.enrollment-form .form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.enrollment-form .name-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.enrollment-form .name-group > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.enrollment-form .name-group label {
+    width: auto;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.enrollment-form .name-group input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+}
+
+.enrollment-form .gender-status-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.enrollment-form .gender-status-group > div {
+    display: flex;
+    align-items: center;
+}
+
+.enrollment-form .gender-status-group label {
+    width: auto;
+    margin-right: 5px;
+}
+
+.enrollment-form .parent-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.enrollment-form .parent-info-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.enrollment-form .parent-info-group label {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.enrollment-form .parent-info-group input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+}
+
+.enrollment-form .upload-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.enrollment-form .upload-group label {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.enrollment-form .submit-reset {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.enrollment-form .submit-reset button,
+.enrollment-form .submit-reset input[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.enrollment-form .submit-reset input[type="reset"] {
+    background-color: #dc3545;
+}
+
+.enrollment-form .submit-reset button:hover,
+.enrollment-form .submit-reset input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .enrollment-form {
+        grid-template-columns: 1fr;
+    }
+
+    .enrollment-form .form-group {
+        align-items: flex-start;
+    }
+
+    .enrollment-form .parent-info {
+        gap: 20px;
+    }
+}

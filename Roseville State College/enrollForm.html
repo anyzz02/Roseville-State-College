@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="h.css">
+    <title>Enrollment Form</title>
+    
+</head>
+
+<body>
+    <header class="w3-crimson">
+        <input type="checkbox" name="" id="chk1">
+        <div class="logo"><h4 style="display: flex; align-items: center;">
+            <a href="HomePage.html">
+                <i class="fa-solid fa-arrow-left arrow"></i>
+            </a>
+            <a href="HomePage.html"e>
+                <img src="img/lo.png" alt="Roseville University Logo" style="width:60px; margin-left: 10px;">
+            </a>
+            ROSEVILLE STATE COLLEGE</h4>
+        </div>
+        
+        <div class="search-box">
+            <form action="">
+                <input type="text" name="search" id="srch" placeholder="Search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <ul>
+            <li><a href="HomePage.html"><i class="fa-solid fa-house-chimney" style="color: #ffffff;"></i> Home</a></li>
+            <li><a href="admission.html"><i class="fa-regular fa-id-card"></i> Admission</a></li>
+            <li><a href="course.html"><i class="fa-solid fa-graduation-cap"></i> Courses</a></li>
+            <li><a href="events.html"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+
+        <div class="menu">
+            <label for="chk1">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+
+    </header>
+    <div class="container" style="padding-top: 120px;">
+        <form action="HomePage.html" class="w3-animate-zoom enrollment-form">
+            <div class="form-header">
+                <img src="img/lo.png" alt="Logo" class="logo">
+                <h2>ENROLLMENT FORM</h2>
+            </div>
+            <div class="column">
+                <div class="form-group">
+                    <div class="name-group">
+                        <div>
+                            <label for="fname">First Name:</label>
+                            <input type="text" name="fname" id="fname" placeholder="Firstname">
+                        </div>
+                        <div>
+                            <label for="mname">Middle Name:</label>
+                            <input type="text" name="mname" id="mname" placeholder="Middle Name">
+                        </div>
+                        <div>
+                            <label for="lname">Last Name:</label>
+                            <input type="text" name="lname" id="lname" placeholder="Lastname">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="text" name="age" id="age">
+                </div>
+
+                <div class="form-group">
+                    <label for="birth">Date of Birth:</label>
+                    <input type="date" name="date" id="date">
+                </div>
+
+                <div class="form-group">
+                    <label for="street">Street Address:</label>
+                    <input type="text" name="street" id="street" placeholder="Street Address">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Hometown Address:</label>
+                    <input type="text" name="city" id="city" placeholder="City">
+                </div>
+
+                <div class="form-group">
+                    <label for="citizen">Citizenship:</label>
+                    <input type="text" name="citizen" id="citizen">
+                </div>
+
+                <div class="form-group gender-status-group">
+                    <div>
+                        <label>Gender:</label>
+                        <input type="radio" id="female" name="gender" value="FEMALE">
+                        <label for="female">Female</label>
+                        <input type="radio" id="male" name="gender" value="MALE">
+                        <label for="male">Male</label>
+                    </div>
+                    <div>
+                        <label>Marital Status:</label>
+                        <select name="status" id="status">
+                            <option value="">Select Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widowed">Widowed</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="program">What Course to enroll:</label>
+                    <select name="course" id="course">
+                        <option value="">Select Course</option>
+                        <option value="IT">Bachelor of Science in Information Technology</option>
+                        <option value="CIVIL">Bachelor of Science in Civil Engineering</option>
+                        <option value="AD">Bachelor of Science in Business Administration</option>
+                        <option value="CRIM">Bachelor of Science in Criminology</option>
+                        <option value="EDU">Bachelor of Science in Education</option>
+                        <option value="NUR">Bachelor of Science in Nursing</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="parent-info">
+                    <div class="parent-info-group">
+                        <label for="father">Father's Name:</label>
+                        <input type="text" name="father" id="father">
+                    </div>
+                    <div class="parent-info-group">
+                        <label for="fcontact">Contact:</label>
+                        <input type="text" name="fcontact" id="fcontact">
+                    </div>
+                    <div class="parent-info-group">
+                        <label for="foccupation">Occupation:</label>
+                        <input type="text" name="foccupation" id="foccupation">
+                    </div>
+
+                    <div class="parent-info-group">
+                        <label for="mother">Mother's Name:</label>
+                        <input type="text" name="mother" id="mother">
+                    </div>
+                    <div class="parent-info-group">
+                        <label for="mcontact">Contact:</label>
+                        <input type="text" name="mcontact" id="mcontact">
+                    </div>
+                    <div class="parent-info-group">
+                        <label for="moccupation">Occupation:</label>
+                        <input type="text" name="moccupation" id="moccupation">
+                    </div>
+                </div>
+
+                <div class="upload-group">
+                    <label for="psa">Upload PSA here:</label>
+                    <input type="file" name="psa" id="psa">
+                </div>
+
+                <div class="upload-group">
+                    <label for="form137">Upload form 137 here:</label>
+                    <input type="file" name="form137" id="form137">
+                </div>
+            </div>
+
+            <div class="submit-reset">
+                <a href="CRIMfaculty.html" class="your-button-style-class">
+                    <button type="submit" class="your-button-style-class">SUBMIT</button>
+                </a>
+                <input type="reset" value="RESET">
+            </div>
+        </form>
+    </div>
+
+    <footer class=" w3-container w3-crimson">
+    <div class="footer-container w3-row">
+        <div class="w3-col l3 m6 s12 w3-center">
+            <img src="img/lo.png" class="w3-image" style="width: 80px;">
+            <p class="w3-large w3-text-khaki w3-text-bold">ROSEVILLE STATE COLLEGE</p>
+            <p class="w3-small">Copyright 2025 by Jessa Rosales</p>
+        </div>
+        <div class="info-footer w3-col l3 m6 s12">
+            <p class="w3-text-bold w3-medium">GET IN TOUCH</p>
+            <p><i class="fa-solid fa-mobile-screen" style="color: #ffffff;"></i> +63951945481</p>
+            <p><i class="fa-solid fa-phone-volume" style="color: #ffffff;"></i> (012) 3456-7890 to 69</p>
+            <p><i class="fa-solid fa-envelope" style="color: #ffffff;"></i> rosevillestatecollege@rsc.com</p>
+        </div>
+        <div class="info-footer w3-col l3 m6 s12">
+            <p class="w3-text-bold w3-medium">ADDRESS</p>
+            <p><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> 7016 Corner Alano-Sagun Streets CDO</p>
+        </div>
+        <div class="w3-col l3 m6 s12">
+            <p class="w3-text-bold w3-medium w3-center" style="margin-top: px;">SOCIAL MEDIA</p>
+            <div class="social-medias">
+                <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </div>
+    <hr class="w3-border-white">
+</footer>
+</body>
+</html>
